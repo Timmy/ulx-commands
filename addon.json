@@ -1,0 +1,15 @@
+{
+	"title": "Timmy’s ULX Commands",
+	"type": "ServerContent",
+	"tags": [
+		"fun"
+	],
+	"ignore": [
+		"addon.txt",
+		".editorconfig",
+		".git*",
+		"CHANGELOG.md",
+		"LICENSE",
+		"README.md"
+	]
+}
