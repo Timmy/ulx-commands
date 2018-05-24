@@ -894,7 +894,7 @@ if SERVER then
 		http.Fetch( "https://raw.githubusercontent.com/Timmy/ulx-commands/master/addon.txt", function( body )
 			body = util.KeyValuesToTable( body )
 			if body and body.version and body.version ~= version then
-				Msg( "\"Timmy’s ULX Commands\" is outdated! Download the latest release at https://github.com/Timmy/ulx-commands/releases." )
+				Msg( "\"Timmy’s ULX Commands\" is outdated! Download the latest release at https://github.com/Timmy/ulx-commands/releases.\n" )
 			end
 		end )
 	end )
