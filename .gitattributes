@@ -1,1 +1,18 @@
+# Automatically normalize line endings for all text-based files.
+# https://git-scm.com/docs/gitattributes#_end_of_line_conversion
+
 * text=auto
+
+# Source code
+*.json text
+*.lua text
+
+# Documentation
+*.md text
+*.txt text
+LICENSE text
+
+# Configs
+.editorconfig text
+.gitattributes text
+.gitignore text
