@@ -1,8 +1,8 @@
 "AddonInfo"
 {
 	"name"            "Timmy’s ULX Commands"
-	"version"         "1.0.0"
-	"up_date"         "2017-10-04"
+	"version"         "1.0.1"
+	"up_date"         "2018-05-24"
 	"author_name"     "Timmy"
 	"author_email"    "hello@timmy.ws"
 	"author_url"      "https://timmy.ws"
