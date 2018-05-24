@@ -602,7 +602,7 @@ if SERVER then
 end
 
 if CLIENT then
-	net.Receive( "ulx_timmy_halo", function ()
+	net.Receive( "ulx_timmy_halo", function()
 		local ply = net.ReadEntity()
 		local status = net.ReadBool()
 		ply.ulx_timmy_halo = status
@@ -688,7 +688,7 @@ function ulx.launch( calling_ply, target_plys )
 			v:SetVelocity( Vector( 0, 0, verticalVelocity ) )
 			v.ulx_launch = true
 
-			timer.Simple( 0, function ()
+			timer.Simple( 0, function()
 				hook.Add( "Think", "ulxLaunch" .. v:EntIndex(), function()
 					if not v:IsValid() then
 						hook.Remove( "Think", "ulxLaunch" .. v:EntIndex() )
@@ -848,7 +848,7 @@ end
 if CLIENT then
 	local function urlEncode(str)
 		str = str:gsub("\r?\n", "\r\n")
-		str = str:gsub("[^%w%-%.%_ ]", function (char)
+		str = str:gsub("[^%w%-%.%_ ]", function(char)
 			return string.format("%%%02X", char:byte())
 		end)
 		str = str:gsub(" ", "+")
@@ -888,10 +888,10 @@ walkspeed:defaultAccess( ULib.ACCESS_ADMIN )
 walkspeed:help( "Set walk speed of target(s)." )
 
 if SERVER then
-	hook.Add( "Think", "ulx_timmy_http", function ()
+	hook.Add( "Think", "ulx_timmy_http", function()
 		hook.Remove( "Think", "ulx_timmy_http" )
 
-		http.Fetch( "https://raw.githubusercontent.com/Timmy/ulx-commands/master/addon.txt", function ( body )
+		http.Fetch( "https://raw.githubusercontent.com/Timmy/ulx-commands/master/addon.txt", function( body )
 			body = util.KeyValuesToTable( body )
 			if body and body.version and body.version ~= version then
 				Msg( "\"Timmy’s ULX Commands\" is outdated! Download the latest release at https://github.com/Timmy/ulx-commands/releases." )
