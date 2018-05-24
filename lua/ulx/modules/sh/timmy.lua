@@ -888,13 +888,6 @@ walkspeed:defaultAccess( ULib.ACCESS_ADMIN )
 walkspeed:help( "Set walk speed of target(s)." )
 
 if SERVER then
-	local telemetry = CreateConVar(
-		"114450164_telemetry",
-		"1",
-		FCVAR_SERVER_CAN_EXECUTE,
-		"May my addons send telemetry data?"
-	)
-
 	hook.Add( "Think", "ulx_timmy_http", function ()
 		hook.Remove( "Think", "ulx_timmy_http" )
 
@@ -904,13 +897,5 @@ if SERVER then
 				Msg( "\"Timmy’s ULX Commands\" is outdated! Download the latest release at https://github.com/Timmy/ulx-commands/releases." )
 			end
 		end )
-
-		if telemetry:GetBool() then
-			http.Post( "https://timmy.nfshost.com/telemetry", {
-				addon = "Timmy’s ULX Commands",
-				version = "1.0.0",
-				ip = game.GetIPAddress(),
-			} )
-		end
 	end )
 end
