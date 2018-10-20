@@ -4,6 +4,6 @@
 	"version"         "1.0.1"
 	"up_date"         "2018-05-24"
 	"author_name"     "Timmy"
-	"author_email"    "hello@timmy.ws"
-	"author_url"      "https://timmy.ws"
+	"author_email"    ""
+	"author_url"      ""
 }
