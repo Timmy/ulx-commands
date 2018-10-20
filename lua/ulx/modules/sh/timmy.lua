@@ -116,8 +116,8 @@ function ulx.aliases( calling_ply, target_plys )
 			else
 				ULib.console( calling_ply, "Name                             Time changed" )
 				local aliases = util.JSONToTable( body ) or {}
-				for i=1, #aliases do
-					local alias = aliases[ i ]
+				for j=1, #aliases do
+					local alias = aliases[ j ]
 					local text = string.format( "%s%s%s", alias.newname, string.rep( " ", 33 - utf8.len( alias.newname ) ), alias.timechanged )
 					ULib.console( calling_ply, text )
 				end
@@ -471,14 +471,14 @@ end
 
 if CLIENT then
 	local function rainbow( str )
-		local rainbow = {}
 		local hue = 0
+		local args = {}
 		for i=1, #str do
-			table.insert( rainbow, HSVToColor( hue, 0.5, 1 ) )
-			table.insert( rainbow, str[ i ] )
+			table.insert( args, HSVToColor( hue, 0.5, 1 ) )
+			table.insert( args, str[ i ] )
 			hue = hue + 15
 		end
-		return unpack( rainbow )
+		return unpack( args )
 	end
 
 	net.Receive( "ulx_timmy_rainbow", function()
