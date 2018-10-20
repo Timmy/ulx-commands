@@ -6,4 +6,5 @@
 	"author_name"     "Timmy"
 	"author_email"    ""
 	"author_url"      ""
+	"info"            "A bunch of extra commands for the ULX admin mod for Garry’s Mod."
 }
