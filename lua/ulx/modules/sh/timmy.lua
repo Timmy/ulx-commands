@@ -131,7 +131,7 @@ function ulx.aliases( calling_ply, target_plys )
 		if v:IsBot() then
 			ULib.tsayError( calling_ply, v:Nick() .. " is a bot!", true )
 		else
-		 	http.Fetch( Format( aliasesApi, v:SteamID64() ), aliasesCallback, aliasesError )
+			http.Fetch( Format( aliasesApi, v:SteamID64() ), aliasesCallback, aliasesError )
 		end
 	end
 
