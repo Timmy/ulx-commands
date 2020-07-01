@@ -62,7 +62,6 @@ Fun
 	- ulx scale <players> [<multiplier: 0<=x<=2.5, default 1>] - Set model scale of target(s). (say: !scale)
 	- ulx stepsize <players> [<step size: 0<=x<=100, default 18>] - Set step size of target(s). (say: !stepsize)
 	- ulx trail <players> - Set trail of target(s). (say: !trail) (opposite: ulx removetrail)
-	- ulx tts {message} - Send a text-to-speech message. (say: !tts)
 	- ulx walkspeed <players> [<speed: 0<=x<=1000, default 200>] - Set walk speed of target(s). (say: !walkspeed)
 ```
 
