@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Removed
+- Broken `ulx tts` command
 
 ## [1.0.1] - 2018-05-24
 ### Changed
@@ -17,5 +19,5 @@ All notable changes to this project will be documented in this file.
 ## 1.0.0 - 2017-10-04
 - Initial release.
 
-[Unreleased]: https://github.com/Timmy/ulx-encore/compare/v1.0.1...HEAD
-[1.0.1]: https://github.com/olivierlacan/keep-a-changelog/compare/v1.0.0...v1.0.1
+[Unreleased]: https://github.com/Timmy/ulx-commands/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/Timmy/ulx-commands/compare/v1.0.0...v1.0.1
