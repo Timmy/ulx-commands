@@ -845,35 +845,6 @@ if SERVER then
 	util.AddNetworkString( "ulx_timmy_tts" )
 end
 
-if CLIENT then
-	local function urlEncode(str)
-		str = str:gsub("\r?\n", "\r\n")
-		str = str:gsub("[^%w%-%.%_ ]", function(char)
-			return string.format("%%%02X", char:byte())
-		end)
-		str = str:gsub(" ", "+")
-		return str
-	end
-
-	net.Receive( "ulx_timmy_tts", function()
-		sound.PlayURL( "https://code.responsivevoice.org/getvoice.php?tl=en&t=" .. urlEncode( net.ReadString() ), "", function( channel )
-			if IsValid( channel ) then channel:Play() end
-		end )
-	end )
-end
-
-function ulx.tts( calling_ply, message )
-	net.Start( "ulx_timmy_tts" )
-		net.WriteString( message )
-	net.Broadcast()
-
-	ulx.fancyLog( "(TTS) *** #P #s", calling_ply, message )
-end
-local tts = ulx.command( "Fun", "ulx tts", ulx.tts, "!tts", true )
-tts:addParam{ type=ULib.cmds.StringArg, hint="message", ULib.cmds.takeRestOfLine }
-tts:defaultAccess( ULib.ACCESS_ADMIN )
-tts:help( "Send a text-to-speech message." )
-
 function ulx.walkspeed( calling_ply, target_plys, walk_speed )
 	for i=1, #target_plys do
 		target_plys[ i ]:SetWalkSpeed( walk_speed )
