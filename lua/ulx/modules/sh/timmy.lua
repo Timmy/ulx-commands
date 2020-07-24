@@ -1,4 +1,4 @@
-local version = "1.0.1"
+local version = "2.0.0"
 
 if SERVER then
 	util.AddNetworkString( "ulx_timmy_cluarun" )

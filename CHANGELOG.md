@@ -2,6 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+
+## [2.0.0] - 2020-07-24
 ### Added
 - New command to unban IP addresses.
 
@@ -25,5 +27,6 @@ All notable changes to this project will be documented in this file.
 ## 1.0.0 - 2017-10-04
 - Initial release.
 
-[Unreleased]: https://github.com/Timmy/ulx-commands/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/Timmy/ulx-commands/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/Timmy/ulx-commands/compare/v1.0.1...v2.0.0
 [1.0.1]: https://github.com/Timmy/ulx-commands/compare/v1.0.0...v1.0.1
