@@ -163,6 +163,22 @@ banip:addParam{ type=ULib.cmds.NumArg, min=0, default=1440, hint="minutes, 0 for
 banip:defaultAccess( ULib.ACCESS_SUPERADMIN )
 banip:help( "Add IP address to banlist." )
 
+function ulx.unbanip( calling_ply, ip_address )
+	if not ULib.isValidIP( ip_address ) then
+		ULib.tsayError( calling_ply, "Invalid IP address." )
+		return
+	end
+
+	RunConsoleCommand( "removeip", ip_address )
+	RunConsoleCommand( "writeip" )
+
+	ulx.fancyLogAdmin( calling_ply, true, "#A unbanned IP address #s", ip_address )
+end
+local unbanip = ulx.command( "Utility", "ulx unbanip", ulx.unbanip, "!unbanip", true, nil, true )
+unbanip:addParam{ type=ULib.cmds.StringArg, hint="IP address" }
+unbanip:defaultAccess( ULib.ACCESS_SUPERADMIN )
+unbanip:help( "Remove IP address from banlist." )
+
 function ulx.bot( calling_ply, number, should_kick )
 	if should_kick then
 		local bots = player.GetBots()
