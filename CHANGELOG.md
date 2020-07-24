@@ -2,8 +2,14 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Added
+- New command to unban IP addresses.
+
 ### Removed
-- Broken `ulx tts` command
+- Broken `ulx tts` command.
+
+### Security
+- Mark `ulx banip` as unsafe.
 
 ## [1.0.1] - 2018-05-24
 ### Changed
