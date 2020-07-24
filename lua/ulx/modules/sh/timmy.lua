@@ -157,7 +157,7 @@ function ulx.banip( calling_ply, ip_address, minutes )
 		ulx.fancyLogAdmin( calling_ply, true, "#A banned IP address #s for #s", ip_address, ULib.secondsToStringTime( minutes * 60 ) )
 	end
 end
-local banip = ulx.command( "Utility", "ulx banip", ulx.banip, "!banip", true )
+local banip = ulx.command( "Utility", "ulx banip", ulx.banip, "!banip", true, nil, true )
 banip:addParam{ type=ULib.cmds.StringArg, hint="IP address" }
 banip:addParam{ type=ULib.cmds.NumArg, min=0, default=1440, hint="minutes, 0 for perma", ULib.cmds.allowTimeString, ULib.cmds.optional }
 banip:defaultAccess( ULib.ACCESS_SUPERADMIN )
